@@ -23,7 +23,7 @@ export default function Skills() {
     }
   ];
 
-  const tools = ['Figma', 'CSS / HTML', 'Claude', 'Cursor', 'Figma Make', 'English B2+'];
+  const tools = ['Figma', 'CSS / HTML', 'Claude', 'Cursor', 'Figma Make', 'English B2+', 'Исследования', 'Custdev', 'Дизайн системы'];
 
   return (
     <section
@@ -51,7 +51,7 @@ export default function Skills() {
 
       <p
         className="text-sm leading-[1.75] mb-12"
-        style={{ color: 'var(--text-secondary)' }}
+        style={{ color: 'var(--text-primary)' }}
       >
         За годы работы мне довелось участвовать не только в проектировании продуктов,
         но и в развитии дизайн-практик внутри команд.
@@ -93,21 +93,39 @@ export default function Skills() {
         ))}
       </div>
 
-      <div className="mt-8 flex flex-wrap gap-2">
-        {tools.map((tool) => (
-          <span
-            key={tool}
-            className="text-[11px] px-3 py-[6px] rounded border whitespace-nowrap"
-            style={{
-              fontFamily: 'var(--font-mono)',
-              color: 'var(--accent-color)',
-              borderColor: 'rgba(124,106,247,0.34)',
-              background: 'rgba(124,106,247,0.07)'
-            }}
-          >
-            {tool}
-          </span>
-        ))}
+      <style>{`
+        @keyframes marqueeR { from { transform: translateX(-50%) } to { transform: translateX(0) } }
+        #tools-marquee:hover .tools-track { animation-play-state: paused }
+        @media (prefers-reduced-motion: reduce) { #tools-marquee .tools-track { animation: none !important } }
+      `}</style>
+      <div
+        id="tools-marquee"
+        className="mt-20 overflow-hidden"
+        style={{
+          WebkitMaskImage: 'linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)',
+          maskImage: 'linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)'
+        }}
+      >
+        <div
+          className="tools-track flex w-max"
+          style={{ animation: 'marqueeR 34s linear infinite' }}
+        >
+          {[...tools, ...tools].map((tool, idx) => (
+            <span
+              key={idx}
+              aria-hidden={idx >= tools.length}
+              className="text-[11px] px-3 py-[6px] mr-[10px] rounded border whitespace-nowrap"
+              style={{
+                fontFamily: 'var(--font-mono)',
+                color: 'var(--accent-color)',
+                borderColor: 'rgba(124,106,247,0.34)',
+                background: 'rgba(124,106,247,0.07)'
+              }}
+            >
+              {tool}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );

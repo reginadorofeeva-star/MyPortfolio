@@ -1,19 +1,15 @@
 import { screenshots } from '../../assets/screenshots';
+import photoLake from '../../assets/screenshots/photo-lake.jpg';
+import photoField from '../../assets/screenshots/photo-field.jpg';
+import photoWall from '../../assets/screenshots/photo-wall.jpg';
 
 export default function Beyond() {
   const photos = [
-    {
-      src: screenshots.photos[0],
-      alt: 'Йога'
-    },
-    {
-      src: screenshots.photos[1],
-      alt: 'Япония'
-    },
-    {
-      src: screenshots.photos[2],
-      alt: 'Храм, Япония'
-    }
+    { src: screenshots.photos[0], alt: 'Йога' },
+    { src: photoLake, alt: 'У озера' },
+    { src: screenshots.photos[1], alt: 'Япония' },
+    { src: photoWall, alt: 'Лето' },
+    { src: photoField, alt: 'Гречишное поле на закате' }
   ];
 
   return (
@@ -54,18 +50,15 @@ export default function Beyond() {
         </p>
       </div>
 
-      <div className="grid grid-cols-[1fr_1.6fr_1fr] gap-[10px] mt-9 max-[500px]:grid-cols-[1fr_1fr]">
+      <div className="mt-9 gap-3 [column-count:3] [column-gap:12px] max-[500px]:[column-count:2]">
         {photos.map((photo, idx) => (
           <img
             key={idx}
             src={photo.src}
             alt={photo.alt}
             loading="lazy"
-            className={`w-full object-cover rounded-[var(--radius)] border transition-all duration-300 hover:scale-[1.01] hover:grayscale-0 ${
-              idx === 2 ? 'max-[500px]:hidden' : ''
-            }`}
+            className="w-full mb-3 [break-inside:avoid] object-cover rounded-[var(--radius)] border transition-all duration-300 hover:scale-[1.01] hover:grayscale-0"
             style={{
-              aspectRatio: idx === 1 ? '3/5' : '3/4',
               borderColor: 'var(--border-color)',
               filter: 'grayscale(10%)'
             }}

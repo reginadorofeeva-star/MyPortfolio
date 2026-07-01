@@ -6,10 +6,10 @@ export default function Hero() {
   const tags = ['8+ years in Design', 'B2B', 'SaaS', 'Data', 'ML', 'AI', 'B2E', 'Vibecoding'];
 
   const contacts = [
-    { icon: '📱', label: 'Telegram', href: SOCIAL_LINKS.telegram },
-    { icon: '✉️', label: 'Email', href: SOCIAL_LINKS.email },
-    { icon: '🎨', label: 'Behance', href: SOCIAL_LINKS.behance },
-    { icon: '🏀', label: 'Dribbble', href: SOCIAL_LINKS.dribbble }
+    { label: 'Telegram', href: SOCIAL_LINKS.telegram },
+    { label: 'Email', href: SOCIAL_LINKS.email },
+    { label: 'Behance', href: SOCIAL_LINKS.behance },
+    { label: 'Dribbble', href: SOCIAL_LINKS.dribbble }
   ];
 
   return (
@@ -108,7 +108,10 @@ export default function Hero() {
                   letterSpacing: '-0.01em'
                 }}
               >
-                <span className="opacity-50">{contact.icon}</span>
+                <span
+                  className="w-[5px] h-[5px] rounded-full flex-none"
+                  style={{ background: '#6a6a72' }}
+                />
                 {contact.label}
               </a>
             ))}
