@@ -11,6 +11,7 @@ export interface ProjectCard {
     value: string;
     label: string;
   }[];
+  highlights?: string[];
   badges: string[];
   behanceLink?: string;
 }
@@ -40,9 +41,9 @@ export const projectsCards: ProjectCard[] = [
     title: 'MLOps Platform',
     description: 'Создание единой ML платформы с нуля и успешный вывод в PROD.',
     metrics: [
-      { value: '×10', label: 'сокращён Time-to-Market' },
-      { value: '↑', label: 'NSAT' }
+      { value: '×10', label: 'сокращён Time-to-Market' }
     ],
+    highlights: ['NSAT ↑'],
     badges: ['B2B SaaS', 'MLOps'],
     behanceLink: 'https://www.behance.net/gallery/250224069/B2B-ML-PLATFORM'
   },
@@ -52,9 +53,9 @@ export const projectsCards: ProjectCard[] = [
     title: 'Data Catalog',
     description: 'Развивала Data Catalog от внутреннего решения до самостоятельного B2B‑продукта. UX‑стратегия, исследования, AI‑функциональность.',
     metrics: [
-      { value: '×4', label: 'ускорение ключевого сценария' },
-      { value: '↑', label: 'NSAT' }
+      { value: '×4', label: 'ускорение ключевого сценария' }
     ],
+    highlights: ['NSAT ↑'],
     badges: ['Data Platform', 'AI Features']
   },
   {
@@ -62,9 +63,8 @@ export const projectsCards: ProjectCard[] = [
     role: 'Product Designer',
     title: 'AI Agents Platform',
     description: 'Проектировала платформу создания AI‑агентов до появления массового рынка подобных решений.',
-    metrics: [
-      { value: 'International', label: 'Launch' }
-    ],
+    metrics: [],
+    highlights: ['International Launch'],
     badges: ['Zero-to-One', 'AI']
   }
 ];

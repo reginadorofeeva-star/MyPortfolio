@@ -50,18 +50,18 @@ export default function Skills() {
       </div>
 
       <p
-        className="text-sm leading-[1.75] mb-6"
+        className="text-sm leading-[1.75] mb-12"
         style={{ color: 'var(--text-secondary)' }}
       >
         За годы работы мне довелось участвовать не только в проектировании продуктов,
         но и в развитии дизайн-практик внутри команд.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-10">
         {skillGroups.map((group) => (
           <div key={group.title}>
             <div
-              className="text-[11px] uppercase pb-[10px] mb-4 border-b"
+              className="text-[11px] uppercase pb-[10px] mb-6 border-b"
               style={{
                 fontFamily: 'var(--font-mono)',
                 letterSpacing: '0.08em',
@@ -71,11 +71,11 @@ export default function Skills() {
             >
               {group.title}
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-7">
               {group.items.map((item, idx) => (
                 <span
                   key={idx}
-                  className="text-[15px] leading-[1.6]"
+                  className="text-[14px] leading-[1.55]"
                   style={{ color: 'var(--text-secondary)' }}
                 >
                   {item}

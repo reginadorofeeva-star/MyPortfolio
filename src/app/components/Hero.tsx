@@ -71,22 +71,25 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-wrap gap-2 mb-10">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-[11px] px-[10px] py-1 rounded border transition-all duration-200"
-                style={{
-                  fontFamily: 'var(--font-mono)',
-                  letterSpacing: '0.04em',
-                  color: 'var(--accent-color)',
-                  borderColor: 'rgba(124,106,247,0.3)',
-                  background: 'rgba(124,106,247,0.05)',
-                  textTransform: 'uppercase'
-                }}
-              >
-                {tag}
-              </span>
-            ))}
+            {tags.map((tag, idx) => {
+              const isFirst = idx === 0;
+              return (
+                <span
+                  key={tag}
+                  className="text-[11px] px-[10px] py-1 rounded border transition-all duration-200"
+                  style={{
+                    fontFamily: 'var(--font-mono)',
+                    letterSpacing: '0.04em',
+                    color: isFirst ? 'var(--success-color)' : 'var(--accent-color)',
+                    borderColor: isFirst ? 'rgba(61,214,140,0.34)' : 'rgba(124,106,247,0.3)',
+                    background: isFirst ? 'rgba(61,214,140,0.07)' : 'rgba(124,106,247,0.05)',
+                    textTransform: 'uppercase'
+                  }}
+                >
+                  {tag}
+                </span>
+              );
+            })}
           </div>
 
           <div className="flex gap-4 flex-wrap">

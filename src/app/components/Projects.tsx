@@ -106,6 +106,21 @@ export default function Projects({ onProjectClick }: ProjectsProps) {
                     </span>
                   </div>
                 ))}
+                {project.highlights?.map((highlight) => (
+                  <span
+                    key={highlight}
+                    className="text-[10px] uppercase px-2 py-[3px] rounded border self-center whitespace-nowrap"
+                    style={{
+                      fontFamily: 'var(--font-mono)',
+                      letterSpacing: '0.04em',
+                      color: 'var(--success-color)',
+                      borderColor: 'rgba(61,214,140,0.34)',
+                      background: 'rgba(61,214,140,0.07)'
+                    }}
+                  >
+                    {highlight}
+                  </span>
+                ))}
                 {project.badges.map((badge) => (
                   <span
                     key={badge}
