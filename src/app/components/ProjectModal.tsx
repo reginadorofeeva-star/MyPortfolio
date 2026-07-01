@@ -159,7 +159,8 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
           <div
             ref={scrollRef}
             onScroll={handleScroll}
-            className="flex-1 min-w-0 overflow-y-auto px-7 md:px-10 py-8"
+            className="flex-1 min-w-0 overflow-y-auto px-7 md:px-10 py-8 [&::-webkit-scrollbar]:w-[6px] [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/10 hover:[&::-webkit-scrollbar-thumb]:bg-white/20"
+            style={{ scrollbarWidth: 'thin', scrollbarColor: 'rgba(255,255,255,0.12) transparent' }}
           >
             {/* OVERVIEW */}
             <section data-sec="overview">
@@ -167,12 +168,13 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[10px] uppercase px-[9px] py-[3px] rounded border"
+                    className="text-[10px] uppercase px-[9px] py-[3px] rounded border whitespace-nowrap"
                     style={{
                       fontFamily: 'var(--font-mono)',
                       letterSpacing: '0.05em',
-                      borderColor: 'var(--border-color)',
-                      color: 'var(--text-muted)'
+                      borderColor: 'rgba(124,106,247,0.3)',
+                      background: 'rgba(124,106,247,0.05)',
+                      color: 'var(--accent-color)'
                     }}
                   >
                     {tag}
@@ -203,18 +205,18 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
 
               {/* Key metrics surfaced at top */}
               {project.keyMetrics && project.keyMetrics.length > 0 && (
-                <div className="grid grid-cols-3 gap-3 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
                   {project.keyMetrics.map((m, idx) => (
                     <div
                       key={idx}
-                      className="rounded-[var(--radius)] p-4 px-[18px]"
+                      className="rounded-[var(--radius)] p-4 px-[18px] flex flex-col"
                       style={{
                         background: 'rgba(61,214,140,0.05)',
                         border: '1px solid rgba(61,214,140,0.15)'
                       }}
                     >
                       <div
-                        className="text-[24px] font-medium leading-none tracking-tight"
+                        className="text-[24px] font-medium leading-none tracking-tight whitespace-nowrap"
                         style={{
                           fontFamily: 'var(--font-mono)',
                           letterSpacing: '-0.03em',
