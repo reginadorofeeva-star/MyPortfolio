@@ -1,22 +1,22 @@
 export default function Experience() {
   const timeline = [
     {
-      date: 'Июнь 2024 — н.в.',
+      date: 'Июнь 2024 — н.в.',
       company: 'МТС',
       role: 'Senior Product Designer'
     },
     {
-      date: 'Июнь 2023 — Авг 2024',
+      date: 'Июнь 2023 — Авг 2024',
       company: 'Neoflex',
       role: 'Product Designer'
     },
     {
-      date: 'Мрт 2020 — Июнь 2023',
+      date: 'Мрт 2020 — Июнь 2023',
       company: 'Индустрия делового программного ПО',
       role: 'Product Designer'
     },
     {
-      date: 'Весна 2018 — Весна 2020',
+      date: 'Весна 2018 — Весна 2020',
       company: 'Freelance',
       role: 'Designer'
     }
@@ -49,8 +49,8 @@ export default function Experience() {
       <div className="grid grid-cols-[1fr_1fr] gap-12 items-start max-[768px]:grid-cols-1">
         <div className="text-sm leading-[1.8]" style={{ color: 'var(--text-secondary)' }}>
           <p>
-            Мой путь в дизайне начался с графического дизайна и художественного образования,
-            которые сформировали сильную визуальную базу и внимание к деталям.
+            Мой путь в дизайне начался с графического дизайна и художественного образования,
+            которые сформировали сильную визуальную базу и внимание к деталям.
           </p>
         </div>
 

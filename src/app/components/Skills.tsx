@@ -1,11 +1,26 @@
 export default function Skills() {
-  const skills = [
-    'Выступала на профессиональных дизайн-мероприятиях с собственными докладами',
-    'Работала в кросс-функциональных командах вместе с Product Owners, системными аналитиками, разработчиками и QA-инженерами',
-    'Проводила пользовательские исследования, интервью и customer development',
-    'Работала с дизайн-системами и участвовала в их развитии',
-    'Создавала внутренние UI Kit и библиотеки компонентов',
-    'Участвовала в выстраивании процессов взаимодействия между дизайном и разработкой'
+  const skillGroups = [
+    {
+      title: 'Исследования',
+      items: [
+        'Проводила пользовательские исследования, интервью и customer development',
+        'Выступала на профессиональных дизайн-мероприятиях с собственными докладами'
+      ]
+    },
+    {
+      title: 'Команда и процессы',
+      items: [
+        'Работала в кросс-функциональных командах вместе с Product Owners, системными аналитиками, разработчиками и QA‑инженерами',
+        'Участвовала в выстраивании процессов взаимодействия между дизайном и разработкой'
+      ]
+    },
+    {
+      title: 'Дизайн-системы',
+      items: [
+        'Работала с дизайн-системами и участвовала в их развитии',
+        'Создавала внутренние UI Kit и библиотеки компонентов'
+      ]
+    }
   ];
 
   const tools = ['Figma', 'CSS / HTML', 'Claude', 'Cursor', 'Figma Make', 'English B2+'];
@@ -38,32 +53,35 @@ export default function Skills() {
         className="text-sm leading-[1.75] mb-6"
         style={{ color: 'var(--text-secondary)' }}
       >
-        За годы работы мне довелось участвовать не только в проектировании продуктов,
-        но и в развитии дизайн-практик внутри команд.
+        За годы работы мне довелось участвовать не только в проектировании продуктов,
+        но и в развитии дизайн-практик внутри команд.
       </p>
 
-      <div className="flex flex-col gap-0">
-        {skills.map((skill, idx) => (
-          <div
-            key={idx}
-            className="flex items-start gap-3 py-[13px] border-b last:border-b-0 transition-all duration-150"
-            style={{ borderColor: 'var(--border-color)' }}
-          >
-            <span
-              className="text-xs mt-[2px] flex-shrink-0"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8">
+        {skillGroups.map((group) => (
+          <div key={group.title}>
+            <div
+              className="text-[11px] uppercase pb-[10px] mb-4 border-b"
               style={{
                 fontFamily: 'var(--font-mono)',
-                color: 'var(--accent-color)'
+                letterSpacing: '0.08em',
+                color: 'var(--success-color)',
+                borderColor: 'var(--border-color)'
               }}
             >
-              →
-            </span>
-            <span
-              className="text-[15px] leading-[1.7]"
-              style={{ color: 'var(--text-secondary)' }}
-            >
-              {skill}
-            </span>
+              {group.title}
+            </div>
+            <div className="flex flex-col gap-4">
+              {group.items.map((item, idx) => (
+                <span
+                  key={idx}
+                  className="text-[15px] leading-[1.6]"
+                  style={{ color: 'var(--text-secondary)' }}
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
         ))}
       </div>
@@ -72,12 +90,12 @@ export default function Skills() {
         {tools.map((tool) => (
           <span
             key={tool}
-            className="text-[11px] px-3 py-[6px] rounded border"
+            className="text-[11px] px-3 py-[6px] rounded border whitespace-nowrap"
             style={{
               fontFamily: 'var(--font-mono)',
-              color: 'var(--text-secondary)',
-              borderColor: 'var(--border-color)',
-              background: 'var(--bg-2)'
+              color: 'var(--accent-color)',
+              borderColor: 'rgba(124,106,247,0.34)',
+              background: 'rgba(124,106,247,0.07)'
             }}
           >
             {tool}

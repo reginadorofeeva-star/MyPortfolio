@@ -81,21 +81,21 @@ export default function Projects({ onProjectClick }: ProjectsProps) {
                 {project.description}
               </p>
 
-              <div className="flex gap-5 flex-wrap">
+              <div className="flex gap-6 flex-wrap items-center">
                 {project.metrics.map((metric, idx) => (
-                  <div key={idx} className="flex items-center gap-[6px]">
+                  <div key={idx} className="flex items-baseline gap-[7px]">
                     <span
-                      className="text-xs font-medium tracking-tight"
+                      className="text-[28px] font-medium leading-none tracking-tight"
                       style={{
                         fontFamily: 'var(--font-mono)',
-                        letterSpacing: '-0.02em',
+                        letterSpacing: '-0.03em',
                         color: 'var(--success-color)'
                       }}
                     >
                       {metric.value}
                     </span>
                     <span
-                      className="text-[11px] tracking-tight"
+                      className="text-[11px] leading-[1.3] max-w-[150px]"
                       style={{
                         fontFamily: 'var(--font-mono)',
                         letterSpacing: '-0.01em',
@@ -109,7 +109,7 @@ export default function Projects({ onProjectClick }: ProjectsProps) {
                 {project.badges.map((badge) => (
                   <span
                     key={badge}
-                    className="text-[10px] uppercase px-2 py-[3px] rounded border"
+                    className="text-[10px] uppercase px-2 py-[3px] rounded border self-center"
                     style={{
                       fontFamily: 'var(--font-mono)',
                       letterSpacing: '0.04em',

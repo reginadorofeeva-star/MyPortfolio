@@ -26,7 +26,7 @@ export default function Avatar({ src, alt = 'Avatar', initials = 'R', size = 'lg
     );
   }
 
-  // Заглушка с инициалами
+  // Заглушка с инициалами
   return (
     <div
       className={`${sizeClasses[size]} rounded-xl border flex items-center justify-center flex-shrink-0`}

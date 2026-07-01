@@ -34,7 +34,7 @@ export default function Beyond() {
             color: 'var(--text-muted)'
           }}
         >
-          Обо мне
+          Обо мне
         </span>
         <div className="flex-1 h-px" style={{ background: 'var(--border-color)' }} />
       </div>
@@ -42,13 +42,13 @@ export default function Beyond() {
       <div className="text-[15px] leading-[1.8] max-w-[560px]" style={{ color: 'var(--text-secondary)' }}>
         <p className="mb-4">
           Вне работы стараюсь находить время для других увлечений. Уже более{' '}
-          <strong style={{ color: 'var(--text-primary)', fontWeight: 500 }}>10 лет занимаюсь йогой</strong>,
-          пишу картины маслом, вяжу, путешествую, фотографирую на плёнку, а летом обожаю кататься на велосипеде.
+          <strong style={{ color: 'var(--text-primary)', fontWeight: 500 }}>10 лет занимаюсь йогой</strong>,
+          пишу картины маслом, вяжу, путешествую, фотографирую на плёнку, а летом обожаю кататься на велосипеде.
         </p>
         <p>
-          Мне нравится создавать вещи как в цифровой среде, так и за её пределами — поэтому{' '}
+          Мне нравится создавать вещи как в цифровой среде, так и за её пределами — поэтому{' '}
           <strong style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
-            творчество и ручная работа
+            творчество и ручная работа
           </strong>{' '}
           остаются важной частью моей жизни.
         </p>
