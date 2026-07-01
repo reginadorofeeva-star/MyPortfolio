@@ -73,13 +73,20 @@ export default function Skills() {
             </div>
             <div className="flex flex-col gap-7">
               {group.items.map((item, idx) => (
-                <span
-                  key={idx}
-                  className="text-[14px] leading-[1.55]"
-                  style={{ color: 'var(--text-secondary)' }}
-                >
-                  {item}
-                </span>
+                <div key={idx} className="flex gap-[10px]">
+                  <span
+                    className="text-[13px] flex-shrink-0 mt-[1px]"
+                    style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent-color)' }}
+                  >
+                    →
+                  </span>
+                  <span
+                    className="text-[14px] leading-[1.55]"
+                    style={{ color: 'var(--text-secondary)' }}
+                  >
+                    {item}
+                  </span>
+                </div>
               ))}
             </div>
           </div>

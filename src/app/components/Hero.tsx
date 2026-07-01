@@ -14,6 +14,7 @@ export default function Hero() {
 
   return (
     <section
+      id="hero"
       className="py-24 pb-20 border-b"
       style={{
         borderColor: 'var(--border-color)',
@@ -36,7 +37,7 @@ export default function Hero() {
             />
             <span
               className="text-[11px] uppercase tracking-wider"
-              style={{ color: 'var(--text-muted)', letterSpacing: '0.08em' }}
+              style={{ color: 'var(--success-color)', letterSpacing: '0.08em' }}
             >
               Available for new opportunities
             </span>

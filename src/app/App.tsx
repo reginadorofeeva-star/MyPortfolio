@@ -8,6 +8,7 @@ import Beyond from './components/Beyond';
 import Footer from './components/Footer';
 import GradientBlobs from './components/GradientBlobs';
 import ProjectModal from './components/ProjectModal';
+import DevTerminal from './components/DevTerminal';
 import { projectsData, type ProjectId } from './data/projects';
 
 export default function App() {
@@ -38,6 +39,8 @@ export default function App() {
         isOpen={!!selectedProject}
         onClose={() => setSelectedProject(null)}
       />
+
+      <DevTerminal />
     </div>
   );
 }

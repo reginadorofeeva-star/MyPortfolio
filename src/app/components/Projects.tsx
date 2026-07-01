@@ -83,28 +83,19 @@ export default function Projects({ onProjectClick }: ProjectsProps) {
 
               <div className="flex gap-6 flex-wrap items-center">
                 {project.metrics.map((metric, idx) => (
-                  <div key={idx} className="flex items-baseline gap-[7px]">
-                    <span
-                      className="text-[28px] font-medium leading-none tracking-tight"
-                      style={{
-                        fontFamily: 'var(--font-mono)',
-                        letterSpacing: '-0.03em',
-                        color: 'var(--success-color)'
-                      }}
-                    >
-                      {metric.value}
-                    </span>
-                    <span
-                      className="text-[11px] leading-[1.3] max-w-[150px]"
-                      style={{
-                        fontFamily: 'var(--font-mono)',
-                        letterSpacing: '-0.01em',
-                        color: 'var(--text-muted)'
-                      }}
-                    >
-                      {metric.label}
-                    </span>
-                  </div>
+                  <span
+                    key={idx}
+                    className="text-[10px] uppercase px-2 py-[3px] rounded border self-center"
+                    style={{
+                      fontFamily: 'var(--font-mono)',
+                      letterSpacing: '0.04em',
+                      color: 'var(--success-color)',
+                      borderColor: 'rgba(61,214,140,0.34)',
+                      background: 'rgba(61,214,140,0.07)'
+                    }}
+                  >
+                    {metric.value} {metric.label}
+                  </span>
                 ))}
                 {project.highlights?.map((highlight) => (
                   <span
