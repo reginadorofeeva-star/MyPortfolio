@@ -1,15 +1,11 @@
 import { screenshots } from '../../assets/screenshots';
-import photoLake from '../../assets/screenshots/photo-lake.jpg';
-import photoField from '../../assets/screenshots/photo-field.jpg';
 import photoWall from '../../assets/screenshots/photo-wall.jpg';
 
 export default function Beyond() {
   const photos = [
     { src: screenshots.photos[0], alt: 'Йога' },
-    { src: photoLake, alt: 'У озера' },
-    { src: screenshots.photos[1], alt: 'Япония' },
-    { src: photoWall, alt: 'Лето' },
-    { src: photoField, alt: 'Гречишное поле на закате' }
+    { src: screenshots.photos[1], alt: 'Я с горой' },
+    { src: photoWall, alt: 'На голубом фоне' }
   ];
 
   return (
@@ -50,15 +46,16 @@ export default function Beyond() {
         </p>
       </div>
 
-      <div className="mt-9 gap-3 [column-count:3] [column-gap:12px] max-[500px]:[column-count:2]">
+      <div className="mt-9 grid grid-cols-3 gap-3 max-[500px]:grid-cols-3">
         {photos.map((photo, idx) => (
           <img
             key={idx}
             src={photo.src}
             alt={photo.alt}
             loading="lazy"
-            className="w-full mb-3 [break-inside:avoid] object-cover rounded-[var(--radius)] border transition-all duration-300 hover:scale-[1.01] hover:grayscale-0"
+            className="w-full object-cover rounded-lg border transition-all duration-300 hover:scale-[1.01] hover:grayscale-0"
             style={{
+              aspectRatio: '4/5',
               borderColor: 'var(--border-color)',
               filter: 'grayscale(10%)'
             }}
